@@ -1,5 +1,6 @@
 # ida.dll compatibility shim
-xorloser - November 2022
+
+v0.1.0 xorloser - November 2022
 
 
 ## What is this for?
