@@ -1,12 +1,16 @@
-#define FORWARDED_EXPORT(procname, dllname) \
-	__pragma(comment(linker, "/export:" #procname "=" #dllname "." #procname))
+//#define FORWARDED_EXPORT(procname, DLL_NAME) \
+//	__pragma(comment(linker, "/export:" #procname "=" #dllname "." #procname))
 
 #ifdef IDA64
 // 64bit
-#define DLL_NAME	"ida64-orig"
+//#define DLL_NAME	"ida64-orig"
+#define FORWARDED_EXPORT(procname, DLL_NAME) \
+	__pragma(comment(linker, "/export:" #procname "=" "ida64-orig" "." #procname))
 #else
 // 32bit
-#define DLL_NAME	"ida-orig"
+//#define DLL_NAME	"ida-orig"
+#define FORWARDED_EXPORT(procname, DLL_NAME) \
+	__pragma(comment(linker, "/export:" #procname "=" "ida-orig" "." #procname))
 #endif
 
 #if   defined(IDA_700)
@@ -29,8 +33,13 @@
 #include "ida_dll_770_exports.h"
 #elif defined(IDA_800)
 #include "ida_dll_800_exports.h"
+#define IDA_MISSING_FUNCS	1
 #elif defined(IDA_810)
 #include "ida_dll_810_exports.h"
+#define IDA_MISSING_FUNCS	1
+#elif defined(IDA_820)
+#include "ida_dll_820_exports.h"
+#define IDA_MISSING_FUNCS	1
 #else
 #error "You need to define an IDA_XXX version specifier"
 #endif
@@ -38,7 +47,7 @@
 
 // Missing functions in ida.dll v8.x
 // These are needed for v7.6 and v7.7 HexRays decompilers to work with IDA v8.x
-#if defined(IDA_800) || defined(IDA_810)
+#if defined(IDA_MISSING_FUNCS)
 #define EXTERNC         extern "C"
 #define idaapi            __stdcall
 #define ida_export        idaapi
@@ -81,4 +90,4 @@ idaman int ida_export create_nodeval_merge_handler(void* a1, void* a2, void* a3,
 }
 */
 
-#endif // defined(IDA_800) || defined(IDA_810)
+#endif // defined(IDA_MISSING_FUNCS)

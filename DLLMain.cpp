@@ -7,7 +7,13 @@
 
 #include <Windows.h>
 
-// uncomment one of the following to produce a shim for that version of ida
+// Uncomment one of the following to produce a shim for that version of ida.
+// 
+// SP1 etc versions are only provided if the SP version dll has different
+// exports to the base version dll. This is not usually the case.
+// If there is no SP version then use the base version. Eg v8.2sp1 is the
+// same as v8.2, so to build a dll for v8.2sp1 just use IDA_820.
+// 
 //#define IDA_700			1
 //#define IDA_710			1
 //#define IDA_710SP1	1
@@ -18,7 +24,8 @@
 //#define IDA_760			1
 //#define IDA_770			1
 //#define IDA_800			1
-#define IDA_810			1
+//#define IDA_810			1
+#define IDA_820			1
 
 #include "ida_dll_exports.h"
 

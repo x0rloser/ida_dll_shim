@@ -1,6 +1,11 @@
 # ida.dll compatibility shim
+v0.1.1
+xorloser
+November 2022 - March 2023
 
-v0.1.0 xorloser - November 2022
+This is targeted for usage with IDA Pro since that is the version I use.
+If you use another version such as IDA Teams and this does work with it,
+then get in contact with me or raise an issue on github.
 
 
 ## What is this for?
@@ -24,6 +29,7 @@ newer versions of IDA and so fail if this is the case.
 
 The HexRays developers could fix this by adding dummy versions of the
 removed exports into future ida.dll releases.
+The exports that are missing are documented in 'ida_dll_exports.h'.
 
 
 ## How to build
@@ -53,3 +59,11 @@ IDA install directory.
 Rename ida-orig.dll to ida.dll
 Rename ida64-orig.dll to ida64.dll
 
+
+## History
+
+v0.1.1 - fixed an issue that made IDA throw an error when trying to use the
+         previous version of this. (sorry about that)
+       - added support for ida v8.2sp1 
+
+v0.1.0 - initial version

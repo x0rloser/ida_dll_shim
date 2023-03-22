@@ -38,6 +38,9 @@
     <ClInclude Include="ida_dll_810_exports.h">
       <Filter>exports</Filter>
     </ClInclude>
+    <ClInclude Include="ida_dll_820_exports.h">
+      <Filter>exports</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="exports">
