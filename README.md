@@ -64,6 +64,6 @@ Rename ida64-orig.dll to ida64.dll
 
 v0.1.1 - fixed an issue that made IDA throw an error when trying to use the
          previous version of this. (sorry about that)
-       - added support for ida v8.2sp1 
+       - added support for ida v8.2 & v8.2sp1 
 
 v0.1.0 - initial version
