@@ -1,7 +1,7 @@
 # ida.dll compatibility shim
-v0.1.1
+v0.1.2
 xorloser
-November 2022 - March 2023
+November 2022 - June 2023
 
 This is targeted for usage with IDA Pro since that is the version I use.
 If you use another version such as IDA Teams and this does work with it,
@@ -61,6 +61,8 @@ Rename ida64-orig.dll to ida64.dll
 
 
 ## History
+
+v0.1.2 - added suport for ida v8.3
 
 v0.1.1 - fixed an issue that made IDA throw an error when trying to use the
          previous version of this. (sorry about that)

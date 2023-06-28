@@ -41,6 +41,9 @@
     <ClInclude Include="ida_dll_820_exports.h">
       <Filter>exports</Filter>
     </ClInclude>
+    <ClInclude Include="ida_dll_830_exports.h">
+      <Filter>exports</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="exports">

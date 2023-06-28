@@ -40,6 +40,9 @@
 #elif defined(IDA_820)
 #include "ida_dll_820_exports.h"
 #define IDA_MISSING_FUNCS	1
+#elif defined(IDA_830)
+#include "ida_dll_830_exports.h"
+#define IDA_MISSING_FUNCS	1
 #else
 #error "You need to define an IDA_XXX version specifier"
 #endif

@@ -16,7 +16,7 @@
 // 
 //#define IDA_700			1
 //#define IDA_710			1
-//#define IDA_710SP1	1
+//#define IDA_710SP1		1
 //#define IDA_720			1
 //#define IDA_730			1
 //#define IDA_740			1
@@ -25,7 +25,8 @@
 //#define IDA_770			1
 //#define IDA_800			1
 //#define IDA_810			1
-#define IDA_820			1
+//#define IDA_820			1
+#define IDA_830				1
 
 #include "ida_dll_exports.h"
 

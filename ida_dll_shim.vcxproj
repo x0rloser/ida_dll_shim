@@ -153,6 +153,7 @@
     <ClInclude Include="ida_dll_800_exports.h" />
     <ClInclude Include="ida_dll_810_exports.h" />
     <ClInclude Include="ida_dll_820_exports.h" />
+    <ClInclude Include="ida_dll_830_exports.h" />
     <ClInclude Include="ida_dll_exports.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
